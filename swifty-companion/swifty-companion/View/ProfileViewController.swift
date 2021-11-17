@@ -2,7 +2,19 @@
 //  ProfileViewController.swift
 //  swifty-companion
 //
-//  Created by Мария Корогодова on 16.11.2021.
+//  Created by Maria Korogodova on 16.11.2021.
 //
 
-import Foundation
+import UIKit
+
+class ProfileViewController: UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+    }
+
+
+}

@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2E827443BD800BC6592 /* AppDelegate.swift */; };
 		4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */; };
-		4C42C2ED27443BD900BC6592 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EC27443BD900BC6592 /* RootViewController.swift */; };
+		4C42C2ED27443BD900BC6592 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EC27443BD900BC6592 /* LoginViewController.swift */; };
 		4C42C2F227443BDC00BC6592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C42C2F127443BDC00BC6592 /* Assets.xcassets */; };
 		4C42C2F527443BDC00BC6592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C42C2F327443BDC00BC6592 /* LaunchScreen.storyboard */; };
 		4CA280FD2744497E0067A6E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA280FC2744497E0067A6E7 /* ProfileViewController.swift */; };
+		4CA28100274586D00067A6E7 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA280FF274586D00067A6E7 /* background.jpeg */; };
+		4CA2810227458A140067A6E7 /* sign_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2810127458A140067A6E7 /* sign_in.png */; };
+		4CA2810427458E150067A6E7 /* intra_font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2810327458E150067A6E7 /* intra_font.otf */; };
+		4CA2810627458EDC0067A6E7 /* intra_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2810527458EDC0067A6E7 /* intra_logo.png */; };
+		4CA281082745983D0067A6E7 /* LocalOathClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA281072745983C0067A6E7 /* LocalOathClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C42C2E527443BD800BC6592 /* swifty-companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42C2E827443BD800BC6592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C42C2EC27443BD900BC6592 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4C42C2EC27443BD900BC6592 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C42C2F127443BDC00BC6592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C42C2F427443BDC00BC6592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C42C2F627443BDC00BC6592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CA280FC2744497E0067A6E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4CA280FF274586D00067A6E7 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
+		4CA2810127458A140067A6E7 /* sign_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_in.png; sourceTree = "<group>"; };
+		4CA2810327458E150067A6E7 /* intra_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = intra_font.otf; sourceTree = "<group>"; };
+		4CA2810527458EDC0067A6E7 /* intra_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intra_logo.png; sourceTree = "<group>"; };
+		4CA281072745983C0067A6E7 /* LocalOathClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalOathClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +69,15 @@
 				4CA280FE274449870067A6E7 /* Entity */,
 				4CA280FB274449320067A6E7 /* View */,
 				4C42C2E827443BD800BC6592 /* AppDelegate.swift */,
+				4CA280FF274586D00067A6E7 /* background.jpeg */,
+				4CA2810327458E150067A6E7 /* intra_font.otf */,
+				4CA2810527458EDC0067A6E7 /* intra_logo.png */,
+				4CA2810127458A140067A6E7 /* sign_in.png */,
 				4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */,
 				4C42C2F127443BDC00BC6592 /* Assets.xcassets */,
 				4C42C2F327443BDC00BC6592 /* LaunchScreen.storyboard */,
 				4C42C2F627443BDC00BC6592 /* Info.plist */,
+				4CA281072745983C0067A6E7 /* LocalOathClient.swift */,
 			);
 			path = "swifty-companion";
 			sourceTree = "<group>";
@@ -70,7 +85,7 @@
 		4CA280FB274449320067A6E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4C42C2EC27443BD900BC6592 /* RootViewController.swift */,
+				4C42C2EC27443BD900BC6592 /* LoginViewController.swift */,
 				4CA280FC2744497E0067A6E7 /* ProfileViewController.swift */,
 			);
 			path = View;
@@ -141,8 +156,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA2810427458E150067A6E7 /* intra_font.otf in Resources */,
 				4C42C2F527443BDC00BC6592 /* LaunchScreen.storyboard in Resources */,
+				4CA2810227458A140067A6E7 /* sign_in.png in Resources */,
+				4CA28100274586D00067A6E7 /* background.jpeg in Resources */,
 				4C42C2F227443BDC00BC6592 /* Assets.xcassets in Resources */,
+				4CA2810627458EDC0067A6E7 /* intra_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,10 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C42C2ED27443BD900BC6592 /* RootViewController.swift in Sources */,
+				4C42C2ED27443BD900BC6592 /* LoginViewController.swift in Sources */,
 				4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */,
 				4CA280FD2744497E0067A6E7 /* ProfileViewController.swift in Sources */,
 				4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */,
+				4CA281082745983D0067A6E7 /* LocalOathClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

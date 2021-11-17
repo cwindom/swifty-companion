@@ -19,5 +19,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>intra_font.otf</string>
+	</array>
 </dict>
 </plist>
