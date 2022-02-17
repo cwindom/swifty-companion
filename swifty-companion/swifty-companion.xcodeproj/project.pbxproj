@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2072E25127BD60F800F3C121 /* exampletodelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exampletodelete.swift; sourceTree = "<group>"; };
 		4C42C2E527443BD800BC6592 /* swifty-companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42C2E827443BD800BC6592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				4C42C2F327443BDC00BC6592 /* LaunchScreen.storyboard */,
 				4C42C2F627443BDC00BC6592 /* Info.plist */,
 				4CA281072745983C0067A6E7 /* LocalOathClient.swift */,
+				2072E25127BD60F800F3C121 /* exampletodelete.swift */,
 			);
 			path = "swifty-companion";
 			sourceTree = "<group>";
