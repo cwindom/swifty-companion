@@ -26,6 +26,7 @@
 		20C7EFA92831971400578AE6 /* ProfileViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFA82831971400578AE6 /* ProfileViewProtocols.swift */; };
 		20C7EFAB2831972800578AE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFAA2831972800578AE6 /* ProfileViewController.swift */; };
 		20C7EFAD2831973400578AE6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFAC2831973400578AE6 /* ProfilePresenter.swift */; };
+		20C7EFB02832B1F300578AE6 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = 20C7EFAF2832B1F300578AE6 /* OAuth2 */; };
 		4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2E827443BD800BC6592 /* AppDelegate.swift */; };
 		4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */; };
 		4C42C2ED27443BD900BC6592 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EC27443BD900BC6592 /* SearchViewController.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C7EFB02832B1F300578AE6 /* OAuth2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +279,9 @@
 			dependencies = (
 			);
 			name = "swifty-companion";
+			packageProductDependencies = (
+				20C7EFAF2832B1F300578AE6 /* OAuth2 */,
+			);
 			productName = "swifty-companion";
 			productReference = 4C42C2E527443BD800BC6592 /* swifty-companion.app */;
 			productType = "com.apple.product-type.application";
@@ -305,6 +310,9 @@
 				Base,
 			);
 			mainGroup = 4C42C2DC27443BD800BC6592;
+			packageReferences = (
+				20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */,
+			);
 			productRefGroup = 4C42C2E627443BD800BC6592 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -566,6 +574,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/p2/OAuth2.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		20C7EFAF2832B1F300578AE6 /* OAuth2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */;
+			productName = OAuth2;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4C42C2DD27443BD800BC6592 /* Project object */;
 }
