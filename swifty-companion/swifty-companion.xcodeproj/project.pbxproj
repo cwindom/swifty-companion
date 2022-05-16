@@ -27,6 +27,7 @@
 		20C7EFAB2831972800578AE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFAA2831972800578AE6 /* ProfileViewController.swift */; };
 		20C7EFAD2831973400578AE6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFAC2831973400578AE6 /* ProfilePresenter.swift */; };
 		20C7EFB02832B1F300578AE6 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = 20C7EFAF2832B1F300578AE6 /* OAuth2 */; };
+		4846B1368A0000EDB428C5D9 /* Pods_swifty_companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3301E5BCC6D07447507C6920 /* Pods_swifty_companion.framework */; };
 		4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2E827443BD800BC6592 /* AppDelegate.swift */; };
 		4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */; };
 		4C42C2ED27443BD900BC6592 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EC27443BD900BC6592 /* SearchViewController.swift */; };
@@ -58,6 +59,7 @@
 		20C7EFA82831971400578AE6 /* ProfileViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocols.swift; sourceTree = "<group>"; };
 		20C7EFAA2831972800578AE6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		20C7EFAC2831973400578AE6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		3301E5BCC6D07447507C6920 /* Pods_swifty_companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42C2E527443BD800BC6592 /* swifty-companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42C2E827443BD800BC6592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,8 @@
 		4CA2810127458A140067A6E7 /* sign_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_in.png; sourceTree = "<group>"; };
 		4CA2810327458E150067A6E7 /* intra_font.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = intra_font.otf; sourceTree = "<group>"; };
 		4CA2810527458EDC0067A6E7 /* intra_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intra_logo.png; sourceTree = "<group>"; };
+		60CB17F679ACA97181BA5CCE /* Pods-swifty-companion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-companion.release.xcconfig"; path = "Target Support Files/Pods-swifty-companion/Pods-swifty-companion.release.xcconfig"; sourceTree = "<group>"; };
+		EC31A933447D82860A89552D /* Pods-swifty-companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swifty-companion.debug.xcconfig"; path = "Target Support Files/Pods-swifty-companion/Pods-swifty-companion.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C7EFB02832B1F300578AE6 /* OAuth2 in Frameworks */,
+				4846B1368A0000EDB428C5D9 /* Pods_swifty_companion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +239,8 @@
 			children = (
 				4C42C2E727443BD800BC6592 /* swifty-companion */,
 				4C42C2E627443BD800BC6592 /* Products */,
+				BED6DF4B3FAC56D9957376EE /* Pods */,
+				516A63C22CC584266B7AB546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,6 +270,24 @@
 			path = "swifty-companion";
 			sourceTree = "<group>";
 		};
+		516A63C22CC584266B7AB546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3301E5BCC6D07447507C6920 /* Pods_swifty_companion.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BED6DF4B3FAC56D9957376EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC31A933447D82860A89552D /* Pods-swifty-companion.debug.xcconfig */,
+				60CB17F679ACA97181BA5CCE /* Pods-swifty-companion.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,9 +295,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C42C2F927443BDC00BC6592 /* Build configuration list for PBXNativeTarget "swifty-companion" */;
 			buildPhases = (
+				7765E6FF9CE7C1FD1EEABDFD /* [CP] Check Pods Manifest.lock */,
 				4C42C2E127443BD800BC6592 /* Sources */,
 				4C42C2E227443BD800BC6592 /* Frameworks */,
 				4C42C2E327443BD800BC6592 /* Resources */,
+				F080362A1E057C8C8143415D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,7 +338,7 @@
 			);
 			mainGroup = 4C42C2DC27443BD800BC6592;
 			packageReferences = (
-				20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */,
+				20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2.git" */,
 			);
 			productRefGroup = 4C42C2E627443BD800BC6592 /* Products */;
 			projectDirPath = "";
@@ -338,6 +365,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7765E6FF9CE7C1FD1EEABDFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swifty-companion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F080362A1E057C8C8143415D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifty-companion/Pods-swifty-companion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swifty-companion/Pods-swifty-companion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swifty-companion/Pods-swifty-companion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C42C2E127443BD800BC6592 /* Sources */ = {
@@ -500,6 +569,7 @@
 		};
 		4C42C2FA27443BDC00BC6592 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC31A933447D82860A89552D /* Pods-swifty-companion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -527,6 +597,7 @@
 		};
 		4C42C2FB27443BDC00BC6592 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60CB17F679ACA97181BA5CCE /* Pods-swifty-companion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,7 +647,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */ = {
+		20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/p2/OAuth2.git";
 			requirement = {
@@ -589,7 +660,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		20C7EFAF2832B1F300578AE6 /* OAuth2 */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */;
+			package = 20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2.git" */;
 			productName = OAuth2;
 		};
 /* End XCSwiftPackageProductDependency section */

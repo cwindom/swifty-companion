@@ -21,6 +21,8 @@ class SearchViewController: UIViewController {
         return profileImage
     }()
     
+    // сделать две вью: одну на случай авторизованного пользователя с поиском и кнопкой, вторую  на случай неавторизованного пользователя с кнопкой авторизоваться
+    // включать их в зависимости от ответа oauth2
     private let textField: UITextField = {
         
         let textField = UITextField()
