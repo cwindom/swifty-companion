@@ -91,7 +91,7 @@ extension NetworkRequest {
     private func httpMethod() -> NetworkRequest.HTTPMethod {
       switch self {
       case .codeExchange:
-        return .get
+        return .post
       case .getRepos:
         return .get
       case .getUser:
@@ -106,11 +106,9 @@ extension NetworkRequest {
           case .codeExchange(let code):
               let queryItems = [
                 URLQueryItem(name: "client_id", value: NetworkRequest.clientID),
-                          URLQueryItem(name: "client_secret", value: NetworkRequest.clientSecret)//,
-//                URLQueryItem(name: "redirect_uri", value: "redirect"),
-//                URLQueryItem(name: "scope", value: "public"),
-//                URLQueryItem(name: "state", value: "publifgjfsfe5df423jlf9r8vuwjrjvf84rudvjc"),
-//                URLQueryItem(name: "responce_type", value: code)
+//                URLQueryItem(name: "client_secret", value: NetworkRequest.clientSecret),
+                URLQueryItem(name: "redirect_uri", value: "https://profile.intra.42.fr"),
+                URLQueryItem(name: "response_type", value: code)
               ]
               return urlComponents(host: "api.intra.42.fr", path: "/oauth/token", queryItems: queryItems).url
           case .getRepos:
@@ -120,12 +118,14 @@ extension NetworkRequest {
               else {
                   return nil
               }
-              return urlComponents(path: "/users/\(username)/repos", queryItems: nil).url
+              return urlComponents(path: "/v2/cursus", queryItems: nil).url
           case .getUser:
-              return urlComponents(path: "/user", queryItems: nil).url
+              return urlComponents(path: "/v2/cursus", queryItems: nil).url
           case .signIn:
               let queryItems = [
-                URLQueryItem(name: "client_id", value: NetworkRequest.clientID)
+                URLQueryItem(name: "client_id", value: NetworkRequest.clientID),
+                URLQueryItem(name: "redirect_uri", value: "https://profile.intra.42.fr/"),
+                URLQueryItem(name: "response_type", value: "code")
               ]
               
               return urlComponents(host: "api.intra.42.fr", path: "/oauth/authorize", queryItems: queryItems).url

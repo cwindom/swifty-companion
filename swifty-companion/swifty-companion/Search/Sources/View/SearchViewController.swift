@@ -109,6 +109,8 @@ class SearchViewController: UIViewController {
             }
         }
         authenticationSession.presentationContextProvider = self
+        // включить для того, чтобы каждый раз надо было вводить пароль
+        authenticationSession.prefersEphemeralWebBrowserSession = true
         if !authenticationSession.start() {
           print("Failed to start ASWebAuthenticationSession")
         }
