@@ -9,15 +9,18 @@ import Foundation
 import UIKit
 
 final class SearchBuilder {
-    
+
 }
 
 extension SearchBuilder: SearchBuilderProtocol {
     
     func build() -> UIViewController {
         
+        // сделать нормально
+        let networkService = NetworkService()
+        
         let view = SearchViewController()
-        let interactor = SearchInteractor()
+        let interactor = SearchInteractor(networkService: networkService)
         let router = SearchRouter(viewController: view)
         let presenter = SearchPresenter(view: view,
                                         interactor: interactor,

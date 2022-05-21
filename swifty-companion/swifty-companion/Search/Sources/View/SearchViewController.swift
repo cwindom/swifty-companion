@@ -40,7 +40,7 @@ class SearchViewController: UIViewController {
         let searchButton = UIButton(type: .system)
         searchButton.translatesAutoresizingMaskIntoConstraints = false
         searchButton.setTitle("найти", for: .normal)
-        searchButton.backgroundColor = .green
+        searchButton.backgroundColor = UIColor(red: 0/255, green: 255/255, blue: 177/255, alpha: 1.0)
         searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
         
         return searchButton
@@ -49,6 +49,8 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         
         setupView()
+        
+        presenter?.viewDidLoad()
     }
     
     private func setupView() {
@@ -72,76 +74,14 @@ class SearchViewController: UIViewController {
     
     @objc func searchButtonTapped() {
         
-        print("searchButtonTapped")
-//        presenter?.openProfile()
-        guard let signInURL = NetworkRequest.RequestType.signIn.networkRequest()?.url else {
-            
-            print("Could not create the sign in URL .")
-            return
-        }
-        let callbackURLScheme = NetworkRequest.callbackURLScheme
-        let authenticationSession = ASWebAuthenticationSession(url: signInURL, callbackURLScheme: callbackURLScheme) { [weak self] callbackURL, error in
-            
-            guard
-                error == nil,
-                let callbackURL = callbackURL,
-                // 2
-                let queryItems = URLComponents(string: callbackURL.absoluteString)?
-                    .queryItems,
-                // 3
-                let code = queryItems.first(where: { $0.name == "code" })?.value,
-                // 4
-                let networkRequest =
-                    NetworkRequest.RequestType.codeExchange(code: code).networkRequest()
-            else {
-                // 5
-                print("An error occurred when attempting to sign in.")
-                return
-            }
-            self?.isLoading = true
-            networkRequest.start(responseType: String.self) { result in
-              switch result {
-              case .success:
-                self?.getUser()
-              case .failure(let error):
-                print("Failed to exchange access code for tokens: \(error)")
-              }
-            }
-        }
-        authenticationSession.presentationContextProvider = self
-        // включить для того, чтобы каждый раз надо было вводить пароль
-        authenticationSession.prefersEphemeralWebBrowserSession = true
-        if !authenticationSession.start() {
-          print("Failed to start ASWebAuthenticationSession")
-        }
-    }
-    
-    private func getUser() {
-        
-        isLoading = true
-        NetworkRequest
-          .RequestType
-          .getUser
-          .networkRequest()?
-          .start(responseType: User.self) { [weak self] result in
-            switch result {
-            case .success:
-                print("success")
-            case .failure(let error):
-              print("Failed to get user, or there is no valid/active session: \(error)")
-            }
-            self?.isLoading = false
-          }
+        presenter?.openProfile()
     }
 }
 
-extension SearchViewController: SearchViewInput {}
-
-extension SearchViewController: ASWebAuthenticationPresentationContextProviding {
+extension SearchViewController: SearchViewInput {
     
-  func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-      
-    let window = UIApplication.shared.windows.first { $0.isKeyWindow }
-    return window ?? ASPresentationAnchor()
-  }
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        
+      return ASPresentationAnchor()
+    }
 }

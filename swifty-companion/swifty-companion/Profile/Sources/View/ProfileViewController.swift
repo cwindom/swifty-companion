@@ -7,6 +7,27 @@
 
 import UIKit
 
+enum CoalitionName: String {
+    
+    case capybara
+    case alpaca
+    case honeyBadger
+    case salamander
+    case other
+}
+
+//enum CoalitionColor: UIColor {
+    
+//    switch self {
+//
+//    case capybara: return .red
+//    case alpaca: return .green
+//    case honeyBadger: return .blue
+//    case salamander: return .violet
+//    default: return .grey
+//    }
+//}
+
 class ProfileViewController: UIViewController {
     
     var presenter: ProfileViewOutput?
@@ -18,7 +39,7 @@ class ProfileViewController: UIViewController {
     
     private func setupView() {
 
-        view.backgroundColor = .red
+        view.backgroundColor = .event
     }
 
 }

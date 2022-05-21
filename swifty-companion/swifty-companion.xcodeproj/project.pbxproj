@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2006CBBE2809865400689AE8 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2006CBBD2809865400689AE8 /* photo.png */; };
-		20C7EF7528300BB500578AE6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF7428300BB500578AE6 /* LaunchViewController.swift */; };
 		20C7EF7B28318F6D00578AE6 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF7A28318F6D00578AE6 /* SearchPresenter.swift */; };
 		20C7EF882831903B00578AE6 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF872831903B00578AE6 /* SearchRouter.swift */; };
 		20C7EF8A2831905000578AE6 /* SearchRouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF892831905000578AE6 /* SearchRouterProtocols.swift */; };
@@ -27,12 +26,15 @@
 		20C7EFAB2831972800578AE6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFAA2831972800578AE6 /* ProfileViewController.swift */; };
 		20C7EFAD2831973400578AE6 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFAC2831973400578AE6 /* ProfilePresenter.swift */; };
 		20C7EFB02832B1F300578AE6 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = 20C7EFAF2832B1F300578AE6 /* OAuth2 */; };
+		20C7EFC02833CC0F00578AE6 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFBF2833CC0F00578AE6 /* NetworkRequest.swift */; };
+		20C7EFC22833D27E00578AE6 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFC12833D27E00578AE6 /* NetworkServiceProtocol.swift */; };
+		20C7EFC42833D28A00578AE6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EFC32833D28A00578AE6 /* NetworkService.swift */; };
+		20CE9BEC2838321000AF6766 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CE9BEB2838321000AF6766 /* UIColor+Extension.swift */; };
 		4846B1368A0000EDB428C5D9 /* Pods_swifty_companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3301E5BCC6D07447507C6920 /* Pods_swifty_companion.framework */; };
 		4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2E827443BD800BC6592 /* AppDelegate.swift */; };
 		4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */; };
 		4C42C2ED27443BD900BC6592 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C42C2EC27443BD900BC6592 /* SearchViewController.swift */; };
 		4C42C2F227443BDC00BC6592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C42C2F127443BDC00BC6592 /* Assets.xcassets */; };
-		4C42C2F527443BDC00BC6592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C42C2F327443BDC00BC6592 /* LaunchScreen.storyboard */; };
 		4CA28100274586D00067A6E7 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4CA280FF274586D00067A6E7 /* background.jpeg */; };
 		4CA2810227458A140067A6E7 /* sign_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2810127458A140067A6E7 /* sign_in.png */; };
 		4CA2810427458E150067A6E7 /* intra_font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4CA2810327458E150067A6E7 /* intra_font.otf */; };
@@ -41,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		2006CBBD2809865400689AE8 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
-		20C7EF7428300BB500578AE6 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		20C7EF7A28318F6D00578AE6 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		20C7EF872831903B00578AE6 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		20C7EF892831905000578AE6 /* SearchRouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterProtocols.swift; sourceTree = "<group>"; };
@@ -59,13 +60,16 @@
 		20C7EFA82831971400578AE6 /* ProfileViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewProtocols.swift; sourceTree = "<group>"; };
 		20C7EFAA2831972800578AE6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		20C7EFAC2831973400578AE6 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		20C7EFBF2833CC0F00578AE6 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		20C7EFC12833D27E00578AE6 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		20C7EFC32833D28A00578AE6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		20CE9BEB2838321000AF6766 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		3301E5BCC6D07447507C6920 /* Pods_swifty_companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swifty_companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42C2E527443BD800BC6592 /* swifty-companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swifty-companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C42C2E827443BD800BC6592 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4C42C2EC27443BD900BC6592 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4C42C2F127443BDC00BC6592 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4C42C2F427443BDC00BC6592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C42C2F627443BDC00BC6592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CA280FF274586D00067A6E7 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		4CA2810127458A140067A6E7 /* sign_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign_in.png; sourceTree = "<group>"; };
@@ -234,6 +238,32 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		20C7EFBE2833CBEC00578AE6 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				20C7EFC62833EBEC00578AE6 /* Sources */,
+				20C7EFC52833EBDB00578AE6 /* Entity */,
+				20C7EFBF2833CC0F00578AE6 /* NetworkRequest.swift */,
+				20C7EFC12833D27E00578AE6 /* NetworkServiceProtocol.swift */,
+				20C7EFC32833D28A00578AE6 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		20C7EFC52833EBDB00578AE6 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		20C7EFC62833EBEC00578AE6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		4C42C2DC27443BD800BC6592 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +285,7 @@
 		4C42C2E727443BD800BC6592 /* swifty-companion */ = {
 			isa = PBXGroup;
 			children = (
+				20C7EFBE2833CBEC00578AE6 /* NetworkService */,
 				20C7EF7928318F2E00578AE6 /* Profile */,
 				20C7EF7828318F1F00578AE6 /* Search */,
 				4C42C2E827443BD800BC6592 /* AppDelegate.swift */,
@@ -263,9 +294,8 @@
 				4CA2810127458A140067A6E7 /* sign_in.png */,
 				4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */,
 				4C42C2F127443BDC00BC6592 /* Assets.xcassets */,
-				4C42C2F327443BDC00BC6592 /* LaunchScreen.storyboard */,
 				4C42C2F627443BDC00BC6592 /* Info.plist */,
-				20C7EF7428300BB500578AE6 /* LaunchViewController.swift */,
+				20CE9BEB2838321000AF6766 /* UIColor+Extension.swift */,
 			);
 			path = "swifty-companion";
 			sourceTree = "<group>";
@@ -284,7 +314,6 @@
 				EC31A933447D82860A89552D /* Pods-swifty-companion.debug.xcconfig */,
 				60CB17F679ACA97181BA5CCE /* Pods-swifty-companion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,7 +367,7 @@
 			);
 			mainGroup = 4C42C2DC27443BD800BC6592;
 			packageReferences = (
-				20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2.git" */,
+				20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */,
 			);
 			productRefGroup = 4C42C2E627443BD800BC6592 /* Products */;
 			projectDirPath = "";
@@ -356,7 +385,6 @@
 			files = (
 				2006CBBE2809865400689AE8 /* photo.png in Resources */,
 				4CA2810427458E150067A6E7 /* intra_font.otf in Resources */,
-				4C42C2F527443BDC00BC6592 /* LaunchScreen.storyboard in Resources */,
 				4CA2810227458A140067A6E7 /* sign_in.png in Resources */,
 				4CA28100274586D00067A6E7 /* background.jpeg in Resources */,
 				4C42C2F227443BDC00BC6592 /* Assets.xcassets in Resources */,
@@ -421,15 +449,18 @@
 				20C7EFA92831971400578AE6 /* ProfileViewProtocols.swift in Sources */,
 				4C42C2ED27443BD900BC6592 /* SearchViewController.swift in Sources */,
 				20C7EFA1283196D700578AE6 /* ProfileInteractorProtocols.swift in Sources */,
+				20C7EFC02833CC0F00578AE6 /* NetworkRequest.swift in Sources */,
 				20C7EF90283190A900578AE6 /* SearchBuilder.swift in Sources */,
+				20C7EFC42833D28A00578AE6 /* NetworkService.swift in Sources */,
+				20C7EFC22833D27E00578AE6 /* NetworkServiceProtocol.swift in Sources */,
 				20C7EF92283190BB00578AE6 /* SearchBuilderProtocols.swift in Sources */,
 				20C7EF9F283196B600578AE6 /* ProfileRouter.swift in Sources */,
 				20C7EF8C2831907300578AE6 /* SearchInteractor.swift in Sources */,
+				20CE9BEC2838321000AF6766 /* UIColor+Extension.swift in Sources */,
 				4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */,
 				20C7EF7B28318F6D00578AE6 /* SearchPresenter.swift in Sources */,
 				4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */,
 				20C7EFA72831970200578AE6 /* ProfileBuilder.swift in Sources */,
-				20C7EF7528300BB500578AE6 /* LaunchViewController.swift in Sources */,
 				20C7EFAD2831973400578AE6 /* ProfilePresenter.swift in Sources */,
 				20C7EF94283190DF00578AE6 /* SearchViewProtocols.swift in Sources */,
 				20C7EFA3283196E400578AE6 /* ProfileInteractor.swift in Sources */,
@@ -438,17 +469,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4C42C2F327443BDC00BC6592 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C42C2F427443BDC00BC6592 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4C42C2F727443BDC00BC6592 /* Debug */ = {
@@ -579,7 +599,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swifty-companion/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,7 +627,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swifty-companion/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,7 +667,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2.git" */ = {
+		20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/p2/OAuth2.git";
 			requirement = {
@@ -660,7 +680,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		20C7EFAF2832B1F300578AE6 /* OAuth2 */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2.git" */;
+			package = 20C7EFAE2832B1F300578AE6 /* XCRemoteSwiftPackageReference "OAuth2" */;
 			productName = OAuth2;
 		};
 /* End XCSwiftPackageProductDependency section */

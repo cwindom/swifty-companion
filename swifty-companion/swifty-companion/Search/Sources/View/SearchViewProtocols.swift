@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import AuthenticationServices
 
-protocol SearchViewInput: AnyObject {
+protocol SearchViewInput: AnyObject, ASWebAuthenticationPresentationContextProviding {
     
 }
 
 protocol SearchViewOutput {
     
     func openProfile()
+    func viewDidLoad()
 }
