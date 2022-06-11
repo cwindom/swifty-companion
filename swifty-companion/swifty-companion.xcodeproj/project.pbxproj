@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2006CBBE2809865400689AE8 /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2006CBBD2809865400689AE8 /* photo.png */; };
+		20435F3F2854CC410018D8E7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F3E2854CC410018D8E7 /* Student.swift */; };
+		20435F492854E6160018D8E7 /* search-contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 20435F482854E6160018D8E7 /* search-contacts.png */; };
+		20435F4C2854EC3D0018D8E7 /* search-contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 20435F4B2854EC3D0018D8E7 /* search-contacts.png */; };
+		20435F4E2854F4170018D8E7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F4D2854F4170018D8E7 /* TabBarController.swift */; };
+		20435F512854F59D0018D8E7 /* EvalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F502854F59D0018D8E7 /* EvalViewController.swift */; };
+		20435F532854F6970018D8E7 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F522854F6970018D8E7 /* EventsViewController.swift */; };
+		20435F552854FEE10018D8E7 /* answers.png in Resources */ = {isa = PBXBuildFile; fileRef = 20435F542854FEE10018D8E7 /* answers.png */; };
+		20435F58285525BD0018D8E7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F57285525BD0018D8E7 /* TableViewCell.swift */; };
+		20435F5A285526610018D8E7 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F59285526610018D8E7 /* Event.swift */; };
 		20C7EF7B28318F6D00578AE6 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF7A28318F6D00578AE6 /* SearchPresenter.swift */; };
 		20C7EF882831903B00578AE6 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF872831903B00578AE6 /* SearchRouter.swift */; };
 		20C7EF8A2831905000578AE6 /* SearchRouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF892831905000578AE6 /* SearchRouterProtocols.swift */; };
@@ -43,6 +52,15 @@
 
 /* Begin PBXFileReference section */
 		2006CBBD2809865400689AE8 /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
+		20435F3E2854CC410018D8E7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		20435F482854E6160018D8E7 /* search-contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-contacts.png"; path = "../../../../../search-contacts.png"; sourceTree = "<group>"; };
+		20435F4B2854EC3D0018D8E7 /* search-contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "search-contacts.png"; path = "../../../../search-contacts.png"; sourceTree = "<group>"; };
+		20435F4D2854F4170018D8E7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		20435F502854F59D0018D8E7 /* EvalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvalViewController.swift; sourceTree = "<group>"; };
+		20435F522854F6970018D8E7 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		20435F542854FEE10018D8E7 /* answers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = answers.png; path = ../../../answers.png; sourceTree = "<group>"; };
+		20435F57285525BD0018D8E7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		20435F59285526610018D8E7 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		20C7EF7A28318F6D00578AE6 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		20C7EF872831903B00578AE6 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		20C7EF892831905000578AE6 /* SearchRouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterProtocols.swift; sourceTree = "<group>"; };
@@ -92,6 +110,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20435F4A2854EC330018D8E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20435F4B2854EC3D0018D8E7 /* search-contacts.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		20435F4F2854F5780018D8E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20435F4D2854F4170018D8E7 /* TabBarController.swift */,
+				20435F502854F59D0018D8E7 /* EvalViewController.swift */,
+				20435F522854F6970018D8E7 /* EventsViewController.swift */,
+				20435F57285525BD0018D8E7 /* TableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		20C7EF7828318F1F00578AE6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +162,7 @@
 		20C7EF8128318FC000578AE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				20435F482854E6160018D8E7 /* search-contacts.png */,
 				4CA280FF274586D00067A6E7 /* background.jpeg */,
 				4CA2810527458EDC0067A6E7 /* intra_logo.png */,
 			);
@@ -242,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				20C7EFC62833EBEC00578AE6 /* Sources */,
-				20C7EFC52833EBDB00578AE6 /* Entity */,
 				20C7EFBF2833CC0F00578AE6 /* NetworkRequest.swift */,
 				20C7EFC12833D27E00578AE6 /* NetworkServiceProtocol.swift */,
 				20C7EFC32833D28A00578AE6 /* NetworkService.swift */,
@@ -253,6 +290,8 @@
 		20C7EFC52833EBDB00578AE6 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				20435F3E2854CC410018D8E7 /* Student.swift */,
+				20435F59285526610018D8E7 /* Event.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -285,6 +324,9 @@
 		4C42C2E727443BD800BC6592 /* swifty-companion */ = {
 			isa = PBXGroup;
 			children = (
+				20C7EFC52833EBDB00578AE6 /* Entity */,
+				20435F4F2854F5780018D8E7 /* Views */,
+				20435F4A2854EC330018D8E7 /* Resources */,
 				20C7EFBE2833CBEC00578AE6 /* NetworkService */,
 				20C7EF7928318F2E00578AE6 /* Profile */,
 				20C7EF7828318F1F00578AE6 /* Search */,
@@ -294,6 +336,7 @@
 				4CA2810127458A140067A6E7 /* sign_in.png */,
 				4C42C2EA27443BD900BC6592 /* SceneDelegate.swift */,
 				4C42C2F127443BDC00BC6592 /* Assets.xcassets */,
+				20435F542854FEE10018D8E7 /* answers.png */,
 				4C42C2F627443BDC00BC6592 /* Info.plist */,
 				20CE9BEB2838321000AF6766 /* UIColor+Extension.swift */,
 			);
@@ -383,11 +426,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20435F4C2854EC3D0018D8E7 /* search-contacts.png in Resources */,
+				20435F492854E6160018D8E7 /* search-contacts.png in Resources */,
 				2006CBBE2809865400689AE8 /* photo.png in Resources */,
 				4CA2810427458E150067A6E7 /* intra_font.otf in Resources */,
 				4CA2810227458A140067A6E7 /* sign_in.png in Resources */,
 				4CA28100274586D00067A6E7 /* background.jpeg in Resources */,
 				4C42C2F227443BDC00BC6592 /* Assets.xcassets in Resources */,
+				20435F552854FEE10018D8E7 /* answers.png in Resources */,
 				4CA2810627458EDC0067A6E7 /* intra_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,13 +488,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				20C7EFA5283196F500578AE6 /* ProfileBuilderProtocols.swift in Sources */,
+				20435F4E2854F4170018D8E7 /* TabBarController.swift in Sources */,
 				20C7EF9D283196A700578AE6 /* ProfileRouterProtocols.swift in Sources */,
 				20C7EFAB2831972800578AE6 /* ProfileViewController.swift in Sources */,
+				20435F5A285526610018D8E7 /* Event.swift in Sources */,
 				20C7EF882831903B00578AE6 /* SearchRouter.swift in Sources */,
 				20C7EF8E2831908400578AE6 /* SearchInteractorProtocols.swift in Sources */,
 				20C7EFA92831971400578AE6 /* ProfileViewProtocols.swift in Sources */,
 				4C42C2ED27443BD900BC6592 /* SearchViewController.swift in Sources */,
 				20C7EFA1283196D700578AE6 /* ProfileInteractorProtocols.swift in Sources */,
+				20435F58285525BD0018D8E7 /* TableViewCell.swift in Sources */,
 				20C7EFC02833CC0F00578AE6 /* NetworkRequest.swift in Sources */,
 				20C7EF90283190A900578AE6 /* SearchBuilder.swift in Sources */,
 				20C7EFC42833D28A00578AE6 /* NetworkService.swift in Sources */,
@@ -457,6 +506,7 @@
 				20C7EF9F283196B600578AE6 /* ProfileRouter.swift in Sources */,
 				20C7EF8C2831907300578AE6 /* SearchInteractor.swift in Sources */,
 				20CE9BEC2838321000AF6766 /* UIColor+Extension.swift in Sources */,
+				20435F512854F59D0018D8E7 /* EvalViewController.swift in Sources */,
 				4C42C2E927443BD800BC6592 /* AppDelegate.swift in Sources */,
 				20C7EF7B28318F6D00578AE6 /* SearchPresenter.swift in Sources */,
 				4C42C2EB27443BD900BC6592 /* SceneDelegate.swift in Sources */,
@@ -464,6 +514,8 @@
 				20C7EFAD2831973400578AE6 /* ProfilePresenter.swift in Sources */,
 				20C7EF94283190DF00578AE6 /* SearchViewProtocols.swift in Sources */,
 				20C7EFA3283196E400578AE6 /* ProfileInteractor.swift in Sources */,
+				20435F532854F6970018D8E7 /* EventsViewController.swift in Sources */,
+				20435F3F2854CC410018D8E7 /* Student.swift in Sources */,
 				20C7EF8A2831905000578AE6 /* SearchRouterProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,3 +20,30 @@ final class SearchInteractor {
 }
 
 extension SearchInteractor: SearchInteractorInput {}
+
+
+struct CursusUser: Codable {
+    let level: Double
+    let skills: [Skills]
+    let cursus: Cursus
+}
+
+struct Skills: Codable {
+    enum CodingKeys: String, CodingKey {
+        case name
+        case level
+    }
+    
+    let name: String
+    let level: Double
+}
+
+struct Cursus: Codable {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+    }
+    
+    let id: Int
+    let name: String
+}

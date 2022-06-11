@@ -10,8 +10,6 @@ import OAuth2
 import Alamofire
 import AuthenticationServices
 
-
-
 struct User: Decodable {
   var login: String
   var name: String
@@ -85,6 +83,7 @@ extension NetworkRequest {
     case signIn
 
     func networkRequest() -> NetworkRequest? {
+        
       guard let url = url() else {
         return nil
       }
@@ -171,9 +170,7 @@ extension NetworkRequest {
                 }
                 return
             }
-            guard
-                error == nil, let data = data
-            else {
+            guard error == nil, let data = data else {
                 DispatchQueue.main.async {
                     let error = error ?? NetworkRequest.RequestError.otherError
                     completionHandler(.failure(error))

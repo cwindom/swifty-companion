@@ -34,4 +34,7 @@ extension UIColor {
     static let honey = UIColor(rgb: 0x52A4C3)
     static let salamander = UIColor(rgb: 0xAA52C3)
     static let event = UIColor(rgb: 0x00BABC)
+    
+
+    static let grey = UIColor(rgb: 0x464646)
 }

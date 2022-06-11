@@ -33,15 +33,17 @@ class ProfileViewController: UIViewController {
     var presenter: ProfileViewOutput?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         setupView()
     }
     
     private func setupView() {
 
-        view.backgroundColor = .event
+        view.backgroundColor = .systemBackground
+        
     }
-
+    
 }
 
 extension ProfileViewController: ProfileViewInput {}
