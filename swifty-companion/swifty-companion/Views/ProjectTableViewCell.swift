@@ -1,15 +1,14 @@
 //
-//  TableViewCell.swift
+//  ProjectTableViewCell.swift
 //  swifty-companion
 //
-//  Created by Корогодова Мария Михайловна on 11.06.2022.
+//  Created by Корогодова Мария Михайловна on 12.06.2022.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class ProjectTableViewCell: UITableViewCell {
     
-    /// Название мероприятия
     var nameLabel: UILabel = {
         
         let label = UILabel()
@@ -17,37 +16,40 @@ class TableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.minimumScaleFactor = 1.0
+        label.textColor = .event
+        label.font = .boldSystemFont(ofSize: 14)
+        label.widthAnchor.constraint(equalToConstant: 128).isActive = true
         
         return label
     }()
     
-    var placeLabel: UILabel = {
+    var dateLabel: UILabel = {
+        
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .left
+        label.font = .systemFont(ofSize: 13)
+        
+        return label
+    }()
+    
+    var markLabel: UILabel = {
         
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .left
         label.minimumScaleFactor = 1.0
+        label.textColor = .systemGreen
+        label.font = .boldSystemFont(ofSize: 14)
         
         return label
     }()
     
-    var dateLabel: UITextView = {
+    lazy var labelStackView: UIStackView = {
         
-        let label = UITextView()
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .left
-        label.isEditable = false
-        label.widthAnchor.constraint(equalToConstant: 64).isActive = true
-        label.backgroundColor = .event
-        
-        return label
-    }()
-    
-    lazy var mainStackView: UIStackView = {
-        
-        var stackView = UIStackView(arrangedSubviews: [dateLabel, labelStackView])
+        var stackView = UIStackView(arrangedSubviews: [nameLabel, dateLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 2
@@ -59,11 +61,11 @@ class TableViewCell: UITableViewCell {
         return stackView
     }()
     
-    lazy var labelStackView: UIStackView = {
+    lazy var mainStackView: UIStackView = {
         
-        var stackView = UIStackView(arrangedSubviews: [nameLabel, placeLabel])
+        var stackView = UIStackView(arrangedSubviews: [labelStackView, markLabel])
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
+        stackView.axis = .horizontal
         stackView.spacing = 2
         stackView.alignment = .fill
         stackView.distribution = .fill
@@ -89,7 +91,7 @@ class TableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
-       super.init(style: style, reuseIdentifier: "TableViewCell")
+       super.init(style: style, reuseIdentifier: "ProjectTableViewCell")
         setUp()
     }
     

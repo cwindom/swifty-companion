@@ -9,7 +9,7 @@ import UIKit
 
 final class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let event: [Event] = {
+    var event: [Event] = {
         [
             Event(name: "Поэтический вечер", date: "29 июня\n18:30", place: "переговорка 224 и онлайн"),
             Event(name: "Встреча книжного клуба", date: "1 июля\n17:30", place: "online и переговорка 224"),
@@ -20,13 +20,12 @@ final class EventsViewController: UIViewController, UITableViewDelegate, UITable
         ]
     }()
     
-    
     lazy var tableView: UITableView = {
         
         let table = UITableView()
         
         table.translatesAutoresizingMaskIntoConstraints = false
-        table.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        table.register(EventTableViewCell.self, forCellReuseIdentifier: "EventTableViewCell")
         table.delegate = self
         table.dataSource = self
         
@@ -45,7 +44,11 @@ final class EventsViewController: UIViewController, UITableViewDelegate, UITable
     
     func setupView() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.event]
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        navigationItem.title = "Все доступные мероприятия"
         view.addSubview(self.tableView)
         setupConstraints()
     }
@@ -56,11 +59,16 @@ final class EventsViewController: UIViewController, UITableViewDelegate, UITable
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventTableViewCell", for: indexPath) as! EventTableViewCell
 
         cell.dateLabel.text = event[indexPath.section].date
+        cell.dateLabel.backgroundColor = event[indexPath.section].colorDate
         cell.nameLabel.text = event[indexPath.section].name
         cell.placeLabel.text = event[indexPath.section].place
         
@@ -72,38 +80,55 @@ final class EventsViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         event.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return 300
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
         return 0
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
+        
         return headerView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("You tapped cell number \(indexPath.section).")
+        let message = self.event[indexPath.section].name
+        let alert = UIAlertController(title: message, message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Отмена", style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        let title = self.event[indexPath.section].isRegister ? "Отписаться" : "Записаться"
+        alert.addAction(UIAlertAction(title: title,
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+            if !self.event[indexPath.section].isRegister {
+                self.event[indexPath.section].colorDate = .event
+                self.event[indexPath.section].isRegister = true
+                tableView.reloadData()
+            }
+            else if self.event[indexPath.section].isRegister {
+                self.event[indexPath.section].colorDate = .systemPink
+                self.event[indexPath.section].isRegister = false
+                tableView.reloadData()
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

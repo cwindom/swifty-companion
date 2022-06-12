@@ -38,13 +38,18 @@ final class TabBarController: UITabBarController {
             }
         }
     }
+    
     override func viewDidLoad() {
-
-            super.viewDidLoad()
-
-            self.setupTabBar()
-
-        }
+        super.viewDidLoad()
+        
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = .white
+        tabBar.standardAppearance = appearance
+        view.backgroundColor = .systemBackground
+        self.setupTabBar()
+        UITabBar.appearance().backgroundColor = .systemBackground
+    }
+    
     private func setupTabBar() {
         
         let dataSource: [TabBarItem] = [.profile, .eval, .event, .search]
@@ -60,7 +65,7 @@ final class TabBarController: UITabBarController {
             case .eval:
                 let vc = EvalViewController()
                 return self.wrappedInNavigationController(with: vc, title: $0.title)
-    
+                
             case .event:
                 let vc = EventsViewController()
                 return self.wrappedInNavigationController(with: vc, title: $0.title)

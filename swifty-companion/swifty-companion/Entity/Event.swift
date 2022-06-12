@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Event {
     
     //в ячейке
-    let name: String
-    let date: String
+    var name: String = ""
+    var date: String = ""
     //в детальной информации?
-    let place: String
+    var place: String = ""
+    var colorDate: UIColor = .systemPink
+    var isRegister: Bool = false
 }
