@@ -21,6 +21,8 @@
 		20435F5E2856805D0018D8E7 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F5D2856805D0018D8E7 /* Project.swift */; };
 		20435F6028568DCF0018D8E7 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 20435F5F28568DCF0018D8E7 /* profile.png */; };
 		20435F62285691150018D8E7 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F61285691150018D8E7 /* Profile.swift */; };
+		20435F642857311C0018D8E7 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F632857311C0018D8E7 /* Contacts.swift */; };
+		20435F66285738070018D8E7 /* SearchProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20435F65285738070018D8E7 /* SearchProfileViewController.swift */; };
 		20C7EF7B28318F6D00578AE6 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF7A28318F6D00578AE6 /* SearchPresenter.swift */; };
 		20C7EF882831903B00578AE6 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF872831903B00578AE6 /* SearchRouter.swift */; };
 		20C7EF8A2831905000578AE6 /* SearchRouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7EF892831905000578AE6 /* SearchRouterProtocols.swift */; };
@@ -69,6 +71,8 @@
 		20435F5D2856805D0018D8E7 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		20435F5F28568DCF0018D8E7 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile.png; path = ../../../profile.png; sourceTree = "<group>"; };
 		20435F61285691150018D8E7 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		20435F632857311C0018D8E7 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		20435F65285738070018D8E7 /* SearchProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProfileViewController.swift; sourceTree = "<group>"; };
 		20C7EF7A28318F6D00578AE6 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		20C7EF872831903B00578AE6 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		20C7EF892831905000578AE6 /* SearchRouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouterProtocols.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				20435F522854F6970018D8E7 /* EventsViewController.swift */,
 				20435F57285525BD0018D8E7 /* EventTableViewCell.swift */,
 				20435F5B28567F400018D8E7 /* ProjectTableViewCell.swift */,
+				20435F65285738070018D8E7 /* SearchProfileViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				20435F59285526610018D8E7 /* Event.swift */,
 				20435F5D2856805D0018D8E7 /* Project.swift */,
 				20435F61285691150018D8E7 /* Profile.swift */,
+				20435F632857311C0018D8E7 /* Contacts.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				20C7EFA92831971400578AE6 /* ProfileViewProtocols.swift in Sources */,
 				4C42C2ED27443BD900BC6592 /* SearchViewController.swift in Sources */,
 				20C7EFA1283196D700578AE6 /* ProfileInteractorProtocols.swift in Sources */,
+				20435F642857311C0018D8E7 /* Contacts.swift in Sources */,
 				20435F58285525BD0018D8E7 /* EventTableViewCell.swift in Sources */,
 				20C7EFC02833CC0F00578AE6 /* NetworkRequest.swift in Sources */,
 				20C7EF90283190A900578AE6 /* SearchBuilder.swift in Sources */,
@@ -530,6 +537,7 @@
 				20C7EF94283190DF00578AE6 /* SearchViewProtocols.swift in Sources */,
 				20C7EFA3283196E400578AE6 /* ProfileInteractor.swift in Sources */,
 				20435F532854F6970018D8E7 /* EventsViewController.swift in Sources */,
+				20435F66285738070018D8E7 /* SearchProfileViewController.swift in Sources */,
 				20435F3F2854CC410018D8E7 /* Student.swift in Sources */,
 				20C7EF8A2831905000578AE6 /* SearchRouterProtocols.swift in Sources */,
 				20435F5E2856805D0018D8E7 /* Project.swift in Sources */,

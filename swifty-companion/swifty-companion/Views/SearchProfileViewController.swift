@@ -1,38 +1,15 @@
 //
-//  ProfileViewController.swift
+//  SearchProfileViewController.swift
 //  swifty-companion
 //
-//  Created by Корогодова Мария Михайловна on 15.05.2022.
+//  Created by Корогодова Мария Михайловна on 13.06.2022.
 //
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var presenter: ProfileViewOutput?
-    
-    let project: [Project] = {
-        [
-            Project(name: "webserv", date: "4 месяца назад", mark: "100"),
-            Project(name: "internship 1", date: "5 месяцев назад", mark: "115"),
-            Project(name: "piscine swift", date: "7 месяцев назад", mark: "100"),
-            Project(name: "ft_printf", date: "8 месяцев назад", mark: "101"),
-            Project(name: "exam rank 03", date: "10 месяцев назад", mark: "125"),
-            Project(name: "philosophers", date: "10 месяцев назад", mark: "100"),
-            Project(name: "minishell", date: "10 месяцев назад", mark: "100"),
-            Project(name: "exam rank 02", date: "1 год назад", mark: "125"),
-            Project(name: "libasm", date: "1 год назад", mark: "100"),
-            Project(name: "cub3d", date: "1 год назад", mark: "103"),
-            Project(name: "exam rank01", date: "2 года назад", mark: "100"),
-            Project(name: "ft_server", date: "2 года назад", mark: "111"),
-            Project(name: "exam rank 00", date: "2 года назад", mark: "103"),
-            Project(name: "netwhat", date: "2 года назад", mark: "100")
-        ]
-    }()
-    
-    let profile: Profile = {
-        Profile(level: 12.6, availability: "Unavailable", wallet: "wallet: 812 ₳", points: "evaluation points: 24")
-    }()
+    var profile: Profile?
     
     var walletLabel: UILabel = {
         
@@ -41,7 +18,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.minimumScaleFactor = 1.0
-        label.text = "wallet: 812 ₳ "
         
         return label
     }()
@@ -53,7 +29,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
         label.minimumScaleFactor = 1.0
-        label.text = "evaluation points: 24"
         
         return label
     }()
@@ -75,11 +50,51 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return stackView
     }()
+    //контакты
+    var mailLabel: UILabel = {
+        
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.minimumScaleFactor = 1.0
+        
+        return label
+    }()
+    
+    var phoneLabel: UILabel = {
+        
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.minimumScaleFactor = 1.0
+        
+        return label
+    }()
+    
+    public lazy var contactsStackView: UIStackView = {
+        
+        let stackView = UIStackView(arrangedSubviews: [
+            mailLabel,
+            phoneLabel
+        ])
+        stackView.backgroundColor = .systemBackground
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.alignment = .center
+        stackView.spacing = 2
+        stackView.layoutMargins = .init(top: 0, left: 8, bottom: 0, right: 8)
+        stackView.isLayoutMarginsRelativeArrangement = true
+        
+        return stackView
+    }()
     
     //фото
     private let profileImage: UIImageView = {
 
-        let profileImage = UIImageView(image: UIImage(named: "profile"))
+        let profileImage = UIImageView(image: UIImage(named: "photo"))
         profileImage.translatesAutoresizingMaskIntoConstraints = false
         profileImage.contentMode = .scaleAspectFit
         profileImage.clipsToBounds = true
@@ -179,7 +194,8 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let stackView = UIStackView(arrangedSubviews: [
             textStackView,
-            labelStackView
+//            labelStackView,
+            contactsStackView
         ])
         stackView.backgroundColor = .systemBackground
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -224,10 +240,17 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         appearance.titleTextAttributes = [.foregroundColor: UIColor.event]
         navigationItem.standardAppearance = appearance
         navigationItem.scrollEdgeAppearance = appearance
-        navigationItem.title = "Cwindom"
+        navigationItem.title = profile?.name ?? ""
         view.addSubview(mainStackView)
         view.addSubview(tableView)
         setupConstraints()
+    
+        walletLabel.text = profile?.wallet
+        pointsLabel.text = profile?.points
+        fullNameLabel.text = profile?.fullName
+        availableLabel.text = profile?.availability
+        mailLabel.text = profile?.contacts?.mail
+        phoneLabel.text = profile?.contacts?.phone
     }
     
     override func viewDidLoad() {
@@ -239,9 +262,9 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectTableViewCell", for: indexPath) as! ProjectTableViewCell
-        cell.nameLabel.text = project[indexPath.row].name
-        cell.dateLabel.text = project[indexPath.row].date
-        cell.markLabel.text = project[indexPath.row].mark
+        cell.nameLabel.text = profile?.projects?[indexPath.row].name
+        cell.dateLabel.text = profile?.projects?[indexPath.row].date
+        cell.markLabel.text = profile?.projects?[indexPath.row].mark
         cell.layer.borderColor = UIColor.systemBackground.cgColor
         cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 16
@@ -250,7 +273,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        project.count
+        profile?.projects?.count ?? 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -261,17 +284,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 48
     }
     
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300
-//    }
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 32
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-//        let headerView = UIView()
         let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
         headerView.backgroundColor = UIColor.clear
         let label = UILabel()
@@ -286,4 +304,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 }
 
-extension ProfileViewController: ProfileViewInput {}
+final class SearchProfileBuilder {
+    
+    public func build(profile: Profile) -> UIViewController {
+        
+        let view = SearchProfileViewController()
+        view.profile = profile
+        
+        return view
+    }
+    
+}

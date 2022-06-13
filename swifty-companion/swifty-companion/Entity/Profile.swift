@@ -10,11 +10,14 @@ import Foundation
 public struct Profile {
     
     //в ячейке
+    var name: String?
+    var fullName: String?
     var level: Float = 0
     var availability: String = ""
     var wallet: String = ""
     var points: String = ""
     
     var projects: [Project]?
+    var contacts: Contacts?
 
 }
